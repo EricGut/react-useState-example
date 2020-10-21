@@ -23,7 +23,7 @@ function App() {
   const randomName = () => {
     // list of names
     let randomUsername = ['alex', 'xavi', 'anna', 'annie', 'javier', 'carlos', 'jordi', 'salvaje'];
-    // list iteration select 1 random item from the list above
+    // select 1 random item from the list above
     const pickRandom = Math.floor(Math.random() * randomUsername.length);
     return randomUsername[pickRandom];
   }
