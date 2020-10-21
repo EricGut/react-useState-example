@@ -12,6 +12,5 @@
 ### start
 
 ```bash
-    git clone https://github.com/EricGut/react-useState-example
     npm start
 ```
