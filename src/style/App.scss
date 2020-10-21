@@ -1,0 +1,98 @@
+$danger: rgb(216, 74, 74);
+$danger-hover: rgb(185, 63, 63);
+$secondary: rgb(61, 119, 228);
+$secondary-hover: rgb(47, 95, 184);
+$white: #fafafa;
+
+.action {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 5em;
+}
+
+.btn-add {
+	background-color: $secondary;
+	color: $white;
+
+	&:hover {
+		background-color: $secondary-hover;
+	}
+}
+
+.title {
+	font-size: clamp(2.5rem, 2.5vw, 5rem);
+	margin-right: 1em;
+}
+
+.birthday-block {
+	margin-top: 1em;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(50em, 1fr));
+	grid-gap: 2.5em;
+}
+
+.user {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1em;
+	border-radius: 1em;
+	box-shadow: 0 0 1em rgba($color: #000000, $alpha: 0.3);
+
+	img {
+		width: 100%;
+		max-width: 8em;
+		border-radius: 50%;
+	}
+
+	.info {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		margin-left: 1em;
+		font-size: 1.5rem;
+
+		.date {
+			font-size: 1.3rem;
+			opacity: 0.9;
+		}
+	}
+
+	.btn-wrap {
+		flex: 1;
+		padding: 1em;
+		display: flex;
+		justify-content: flex-end;
+
+		.btn-del {
+			background-color: $danger;
+			color: $white;
+
+			&:hover {
+				background-color: $danger-hover;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.birthday-block {
+		grid-template-columns: repeat(auto-fit, 100%);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.btn-add {
+		margin-top: 1em;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.btn-wrap {
+		justify-content: center !important;
+	}
+}

@@ -1,0 +1,121 @@
+.action {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 5em;
+}
+
+.btn-add {
+  background-color: #3d77e4;
+  color: #fafafa;
+}
+
+.btn-add:hover {
+  background-color: #2f5fb8;
+}
+
+.title {
+  font-size: clamp(2.5rem, 2.5vw, 5rem);
+  margin-right: 1em;
+}
+
+.birthday-block {
+  margin-top: 1em;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(50em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(50em, 1fr));
+  grid-gap: 2.5em;
+}
+
+.user {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1em;
+  border-radius: 1em;
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+}
+
+.user img {
+  width: 100%;
+  max-width: 8em;
+  border-radius: 50%;
+}
+
+.user .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1em;
+  font-size: 1.5rem;
+}
+
+.user .info .date {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.user .btn-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.user .btn-wrap .btn-del {
+  background-color: #d84a4a;
+  color: #fafafa;
+}
+
+.user .btn-wrap .btn-del:hover {
+  background-color: #b93f3f;
+}
+
+@media screen and (max-width: 600px) {
+  .birthday-block {
+    -ms-grid-columns: (100%)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 100%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btn-add {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .btn-wrap {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
