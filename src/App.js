@@ -22,7 +22,6 @@ function App() {
   // select a random name for the add user function
   const randomName = () => {
     let randomUsername = ['alex', 'xavi', 'anna', 'annie', 'javier', 'carlos', 'jordi', 'salvaje'];
-    // select 1 random item from the list above
     const pickRandom = Math.floor(Math.random() * randomUsername.length);
     return randomUsername[pickRandom];
   }
@@ -32,9 +31,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false);
-      // create of new user
       const newUser = { id: new Date().getTime(), name: randomName(), date: '09/07/2021', image: require('./images/default-user_6_0.png') };
-      // push the new user in the array
       setUser([...users, newUser]);
     }, 500);
   }
@@ -45,10 +42,10 @@ function App() {
       <div className="action">
         <h1 className="title">Birthday Reminder</h1>
         {/* add user button */}
-        <button onClick={addUser} className="btn btn-add">{(loading) ? 'loading...' : 'new reminder'}</button>
+        <button onClick={addUser} className="btn btn--add">{(loading) ? 'loading...' : 'new reminder'}</button>
       </div>
       <h2>You have {users.length} reminders</h2>
-      <div className="birthday-block">
+      <div className="birthday-display">
         {
           // we iterate the data of the useState (important)
           users.slice(0).reverse().map((user) => {
@@ -57,13 +54,13 @@ function App() {
 
             return <div className="user" key={id}>
               <img src={image} alt="" />
-              <div className="info">
-                <strong className="name">Birthday of {name}</strong>
-                <span className="date">{date}</span>
+              <div className="user__info">
+                <strong className="info__name">Birthday of {name}</strong>
+                <span className="info__date">{date}</span>
               </div>
               {/* remove user button */}
               <div className="btn-wrap">
-                <button className="btn btn-del" onClick={() => removeHandler(id)}>Remove</button>
+                <button className="btn btn--del" onClick={() => removeHandler(id)}>Remove</button>
               </div>
             </div>
           })

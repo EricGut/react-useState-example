@@ -12,7 +12,7 @@ $white: #fafafa;
 	margin-bottom: 5em;
 }
 
-.btn-add {
+.btn--add {
 	background-color: $secondary;
 	color: $white;
 
@@ -26,7 +26,7 @@ $white: #fafafa;
 	margin-right: 1em;
 }
 
-.birthday-block {
+.birthday-display {
 	margin-top: 1em;
 	width: 100%;
 	display: grid;
@@ -49,14 +49,14 @@ $white: #fafafa;
 		border-radius: 50%;
 	}
 
-	.info {
+	&__info {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
 		margin-left: 1em;
 		font-size: 1.5rem;
 
-		.date {
+		.info__date {
 			font-size: 1.3rem;
 			opacity: 0.9;
 		}
@@ -68,7 +68,7 @@ $white: #fafafa;
 		display: flex;
 		justify-content: flex-end;
 
-		.btn-del {
+		.btn--del {
 			background-color: $danger;
 			color: $white;
 
@@ -80,13 +80,13 @@ $white: #fafafa;
 }
 
 @media screen and (max-width: 600px) {
-	.birthday-block {
+	.birthday-display {
 		grid-template-columns: repeat(auto-fit, 100%);
 	}
 }
 
 @media screen and (max-width: 480px) {
-	.btn-add {
+	.btn--add {
 		margin-top: 1em;
 	}
 }
