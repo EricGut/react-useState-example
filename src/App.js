@@ -21,21 +21,19 @@ function App() {
 
   // select a random name for the add user function
   const randomName = () => {
-    // list of names
     let randomUsername = ['alex', 'xavi', 'anna', 'annie', 'javier', 'carlos', 'jordi', 'salvaje'];
     // select 1 random item from the list above
     const pickRandom = Math.floor(Math.random() * randomUsername.length);
     return randomUsername[pickRandom];
   }
 
-  // adduser function add a random id an a random name explain above
+  // adduser function
   const addUser = () => {
     setLoading(true)
-    let randomId = 100000;
     setTimeout(() => {
       setLoading(false);
       // create of new user
-      const newUser = { id: Math.floor(Math.random() * randomId + 5), name: randomName(), date: '09/07/2021', image: require('./images/default-user_6_0.png') };
+      const newUser = { id: new Date().getTime(), name: randomName(), date: '09/07/2021', image: require('./images/default-user_6_0.png') };
       // push the new user in the array
       setUser([...users, newUser]);
     }, 500);
